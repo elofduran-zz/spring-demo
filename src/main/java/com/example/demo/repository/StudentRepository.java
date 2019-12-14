@@ -11,7 +11,7 @@ public interface StudentRepository {
 
     Optional<Student> fetchById(Long id);
 
-    int addStudent(Student student);
+    Student addStudent(Student student);
 
     int deleteStudent(Long id);
 

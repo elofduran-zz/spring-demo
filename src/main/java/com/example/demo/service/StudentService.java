@@ -18,7 +18,7 @@ public class StudentService {
         this.studentRepository = studentRepository;
     }
 
-    public int addStudent(Student student) {
+    public Student addStudent(Student student) {
         return studentRepository.addStudent(student);
     }
 

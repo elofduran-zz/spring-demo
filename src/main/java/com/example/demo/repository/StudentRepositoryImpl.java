@@ -24,9 +24,9 @@ public class StudentRepositoryImpl implements StudentRepository {
     }
 
     @Override
-    public int addStudent(Student student) {
+    public Student addStudent(Student student) {
         students.add(student);
-        return 1;
+        return student;
     }
 
     @Override

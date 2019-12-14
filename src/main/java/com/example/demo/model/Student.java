@@ -1,29 +1,23 @@
 package com.example.demo.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
 @JsonSerialize
-@Entity
 public class Student implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @NotBlank
     private Long id;
 
-    @NotNull
+    @NotBlank
     private final String name;
 
-    public Student(@JsonProperty("name") String name) {
+    public Student(@JsonProperty("id") Long id, @JsonProperty("name") String name) {
+        this.id = id;
         this.name = name;
     }
 
